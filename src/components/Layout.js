@@ -15,193 +15,196 @@ import {
   Sidebar,
   Visibility
 } from "semantic-ui-react";
+import DesktopContainer from "./desktop/container";
+import MobileContainer from "./mobile/container";
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
 // For more advanced usage please check Responsive docs under the "Usage" section.
-const getWidth = () => {
-  const isSSR = typeof window === "undefined";
+// const getWidth = () => {
+//   const isSSR = typeof window === "undefined";
 
-  return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth;
-};
+//   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth;
+// };
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
-const HomepageHeading = ({ mobile }) => (
-  <Container text>
-    <Header
-      as="h1"
-      content="Imagine-a-Company"
-      inverted
-      style={{
-        fontSize: mobile ? "2em" : "4em",
-        fontWeight: "normal",
-        marginBottom: 0,
-        marginTop: mobile ? "1.5em" : "3em"
-      }}
-    />
-    <Header
-      as="h2"
-      content="Do whatever you want when you want to."
-      inverted
-      style={{
-        fontSize: mobile ? "1.5em" : "1.7em",
-        fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em"
-      }}
-    />
-    <Button primary size="huge">
-      Get Started
-      <Icon name="right arrow" />
-    </Button>
-  </Container>
-);
+// const HomepageHeading = ({ mobile }) => (
+//   <Container text>
+//     <Header
+//       as="h1"
+//       content="Imagine-a-Company"
+//       inverted
+//       style={{
+//         fontSize: mobile ? "2em" : "4em",
+//         fontWeight: "normal",
+//         marginBottom: 0,
+//         marginTop: mobile ? "1.5em" : "3em"
+//       }}
+//     />
+//     <Header
+//       as="h2"
+//       content="Do whatever you want when you want to."
+//       inverted
+//       style={{
+//         fontSize: mobile ? "1.5em" : "1.7em",
+//         fontWeight: "normal",
+//         marginTop: mobile ? "0.5em" : "1.5em"
+//       }}
+//     />
+//     <Button primary size="huge">
+//       Get Started
+//       <Icon name="right arrow" />
+//     </Button>
+//   </Container>
+// );
 
-HomepageHeading.propTypes = {
-  mobile: PropTypes.bool
-};
+// HomepageHeading.propTypes = {
+//   mobile: PropTypes.bool
+// };
 
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
-class DesktopContainer extends Component {
-  state = {};
 
-  hideFixedMenu = () => this.setState({ fixed: false });
-  showFixedMenu = () => this.setState({ fixed: true });
+// class DesktopContainer extends Component {
+//   state = {};
 
-  render() {
-    const { children } = this.props;
-    const { fixed } = this.state;
+//   hideFixedMenu = () => this.setState({ fixed: false });
+//   showFixedMenu = () => this.setState({ fixed: true });
 
-    return (
-      <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-        <Visibility
-          once={false}
-          onBottomPassed={this.showFixedMenu}
-          onBottomPassedReverse={this.hideFixedMenu}
-        >
-          <Segment
-            inverted
-            textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" }}
-            vertical
-          >
-            <Menu
-              fixed={fixed ? "top" : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size="big"
-            >
-              <Container>
-                <Menu.Item as="a" active>Dan</Menu.Item>
-                <Menu.Item as="a">Code</Menu.Item>
-                <Menu.Item as="a">Projects</Menu.Item>
-                <Menu.Item as="a">Resume</Menu.Item>
-                
-                <Menu.Item position="right">
-                  <Button as="a" inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button
-                    as="a"
-                    inverted={!fixed}
-                    primary={fixed}
-                    style={{ marginLeft: "0.5em" }}
-                  >
-                    Sign Up
-                  </Button>
-                </Menu.Item>
-              </Container>
-            </Menu>
-            <HomepageHeading />
-          </Segment>
-        </Visibility>
+//   render() {
+//     const { children } = this.props;
+//     const { fixed } = this.state;
 
-        {children}
-      </Responsive>
-    );
-  }
-}
+//     return (
+//       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+//         <Visibility
+//           once={false}
+//           onBottomPassed={this.showFixedMenu}
+//           onBottomPassedReverse={this.hideFixedMenu}
+//         >
+//           <Segment
+//             inverted
+//             textAlign="center"
+//             style={{ minHeight: 700, padding: "1em 0em" }}
+//             vertical
+//           >
+//             <Menu
+//               fixed={fixed ? "top" : null}
+//               inverted={!fixed}
+//               pointing={!fixed}
+//               secondary={!fixed}
+//               size="big"
+//             >
+//               <Container>
+//                 <Menu.Item as="a" active>Dan</Menu.Item>
+//                 <Menu.Item as="a">Code</Menu.Item>
+//                 <Menu.Item as="a">Projects</Menu.Item>
+//                 <Menu.Item as="a">Resume</Menu.Item>
 
-DesktopContainer.propTypes = {
-  children: PropTypes.node
-};
+//                 <Menu.Item position="right">
+//                   <Button as="a" inverted={!fixed}>
+//                     Log in
+//                   </Button>
+//                   <Button
+//                     as="a"
+//                     inverted={!fixed}
+//                     primary={fixed}
+//                     style={{ marginLeft: "0.5em" }}
+//                   >
+//                     Sign Up
+//                   </Button>
+//                 </Menu.Item>
+//               </Container>
+//             </Menu>
+//             <HomepageHeading />
+//           </Segment>
+//         </Visibility>
 
-class MobileContainer extends Component {
-  state = {};
+//         {children}
+//       </Responsive>
+//     );
+//   }
+// }
 
-  handleSidebarHide = () => this.setState({ sidebarOpened: false });
+// DesktopContainer.propTypes = {
+//   children: PropTypes.node
+// };
 
-  handleToggle = () => this.setState({ sidebarOpened: true });
+// class MobileContainer extends Component {
+//   state = {};
 
-  render() {
-    const { children } = this.props;
-    const { sidebarOpened } = this.state;
+//   handleSidebarHide = () => this.setState({ sidebarOpened: false });
 
-    return (
-      <Responsive
-        as={Sidebar.Pushable}
-        getWidth={getWidth}
-        maxWidth={Responsive.onlyMobile.maxWidth}
-      >
-        <Sidebar
-          as={Menu}
-          animation="push"
-          inverted
-          onHide={this.handleSidebarHide}
-          vertical
-          visible={sidebarOpened}
-        >
-          <Menu.Item as="a" active>
-            Home
-          </Menu.Item>
-          <Menu.Item as="a">Work</Menu.Item>
-          <Menu.Item as="a">Company</Menu.Item>
-          <Menu.Item as="a">Careers</Menu.Item>
-          <Menu.Item as="a">Log in</Menu.Item>
-          <Menu.Item as="a">Sign Up</Menu.Item>
-        </Sidebar>
+//   handleToggle = () => this.setState({ sidebarOpened: true });
 
-        <Sidebar.Pusher dimmed={sidebarOpened}>
-          <Segment
-            inverted
-            textAlign="center"
-            style={{ minHeight: 350, padding: "1em 0em" }}
-            vertical
-          >
-            <Container>
-              <Menu inverted pointing secondary size="large">
-                <Menu.Item onClick={this.handleToggle}>
-                  <Icon name="sidebar" />
-                </Menu.Item>
-                <Menu.Item position="right">
-                  <Button as="a" inverted>
-                    Log in
-                  </Button>
-                  <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                    Sign Up
-                  </Button>
-                </Menu.Item>
-              </Menu>
-            </Container>
-            <HomepageHeading mobile />
-          </Segment>
+//   render() {
+//     const { children } = this.props;
+//     const { sidebarOpened } = this.state;
 
-          {children}
-        </Sidebar.Pusher>
-      </Responsive>
-    );
-  }
-}
+//     return (
+//       <Responsive
+//         as={Sidebar.Pushable}
+//         getWidth={getWidth}
+//         maxWidth={Responsive.onlyMobile.maxWidth}
+//       >
+//         <Sidebar
+//           as={Menu}
+//           animation="push"
+//           inverted
+//           onHide={this.handleSidebarHide}
+//           vertical
+//           visible={sidebarOpened}
+//         >
+//           <Menu.Item as="a" active>
+//             Home
+//           </Menu.Item>
+//           <Menu.Item as="a">Work</Menu.Item>
+//           <Menu.Item as="a">Company</Menu.Item>
+//           <Menu.Item as="a">Careers</Menu.Item>
+//           <Menu.Item as="a">Log in</Menu.Item>
+//           <Menu.Item as="a">Sign Up</Menu.Item>
+//         </Sidebar>
 
-MobileContainer.propTypes = {
-  children: PropTypes.node
-};
+//         <Sidebar.Pusher dimmed={sidebarOpened}>
+//           <Segment
+//             inverted
+//             textAlign="center"
+//             style={{ minHeight: 350, padding: "1em 0em" }}
+//             vertical
+//           >
+//             <Container>
+//               <Menu inverted pointing secondary size="large">
+//                 <Menu.Item onClick={this.handleToggle}>
+//                   <Icon name="sidebar" />
+//                 </Menu.Item>
+//                 <Menu.Item position="right">
+//                   <Button as="a" inverted>
+//                     Log in
+//                   </Button>
+//                   <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
+//                     Sign Up
+//                   </Button>
+//                 </Menu.Item>
+//               </Menu>
+//             </Container>
+//             <HomepageHeading mobile />
+//           </Segment>
+
+//           {children}
+//         </Sidebar.Pusher>
+//       </Responsive>
+//     );
+//   }
+// }
+
+// MobileContainer.propTypes = {
+//   children: PropTypes.node
+// };
 
 const ResponsiveContainer = ({ children }) => (
   <div>
@@ -212,12 +215,11 @@ const ResponsiveContainer = ({ children }) => (
 
 ResponsiveContainer.propTypes = {
   children: PropTypes.node
-};  
-dwqewq
+};
 
 const Layout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: "8em 0em" }} vertical>
+    {/* <Segment id="PROJECTS" style={{ padding: "8em 0em" }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>
           <Grid.Column width={8}>
@@ -252,9 +254,56 @@ const Layout = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
+    </Segment> */}
+    <Segment id="ABOUT" style={{ padding: "5em 0em" }} vertical>
+      <Grid container stackable verticalAlign="middle">
+        <Grid.Row>
+          <Grid.Column width={16} textAlign="center">
+            <Header as="h2" style={{ fontSize: "3em" }}>
+              ABOUT XIAOXU ZHOU
+            </Header>
+            <Divider horizontal></Divider>
+            <Header >
+              Dan is a responsible person. He is passionate about coding and developing fatastic projects.
+            </Header>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={8}>
+            <Header as="h3" style={{ fontSize: "2em" }}>
+              We Help Companies and Companions
+            </Header>
+            <p style={{ fontSize: "1.33em" }}>
+              We can give your company superpowers to do things that they never
+              thought possible. Let us delight your customers and empower your
+              needs... through pure data analytics.
+            </p>
+            <Header as="h3" style={{ fontSize: "2em" }}>
+              We Make Bananas That Can Dance
+            </Header>
+            <p style={{ fontSize: "1.33em" }}>
+            Dan is also very family oriented and has a 10 year old daughter named Brianna and a 7 year old son named Nicky who is severely autistic and non-verbal. Work and family is the cornerstone of Brad's life
+            </p>
+          </Grid.Column>
+          <Grid.Column width={8}>
+            <Image
+              bordered
+              circular
+              centered
+              size="large"
+              src="/images/Dan.JPG"
+            />
+          </Grid.Column>
+        </Grid.Row>
+        {/* <Grid.Row>
+          <Grid.Column textAlign="center">
+            <Button size="huge">Check Them Out</Button>
+          </Grid.Column>
+        </Grid.Row> */}
+      </Grid>
     </Segment>
 
-    <Segment style={{ padding: "0em" }} vertical>
+    {/* <Segment id="ABOUT" style={{ padding: "0em" }} vertical>
       <Grid celled="internally" columns="equal" stackable>
         <Grid.Row textAlign="center">
           <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
@@ -276,9 +325,9 @@ const Layout = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    </Segment>
+    </Segment> */}
 
-    <Segment style={{ padding: "8em 0em" }} vertical>
+    <Segment id="CONTACT" style={{ padding: "8em 0em" }} vertical>
       <Container text>
         <Header as="h3" style={{ fontSize: "2em" }}>
           Breaking The Grid, Grabs Your Attention
