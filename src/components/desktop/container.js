@@ -41,14 +41,15 @@ class DesktopContainer extends Component {
         <Visibility
           once={false}
           onTopPassed={this.showFixedMenu}
+          onBottomPassedReverse = {this.showFixedMenu}
           onTopPassedReverse={this.hideFixedMenu}
         >
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" }}
+            style={{ minHeight: 700, padding: "1em 0em" , borderBottom:"1px solid white",clipPath:"polygon(0 0, 100% 0, 100% 60vh, 0 100%)"}}
             vertical
-            color="red"
+            color="blue"
           >
             <Menu
               fixed={fixed ? "top" : null}
@@ -56,7 +57,7 @@ class DesktopContainer extends Component {
               //   pointing={!fixed}
               //   secondary={!fixed}
               size="large"
-              color="red"
+              color="blue"
               style={
                 fixed
                   ? { transition: "min-height 0.2s ease 0s", minHeight: "70px" }

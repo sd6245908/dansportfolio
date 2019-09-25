@@ -17,6 +17,8 @@ import {
 } from "semantic-ui-react";
 import DesktopContainer from "./desktop/container";
 import MobileContainer from "./mobile/container";
+import SkillStackCard from "./desktop/skillstackcard";
+import ProjectTabular from './desktop/projecttabular'
 
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
@@ -255,34 +257,36 @@ const Layout = () => (
         </Grid.Row>
       </Grid>
     </Segment> */}
-    <Segment id="ABOUT" style={{ padding: "5em 0em" }} vertical>
+    <Segment id="ABOUT" vertical style={{ padding: "5em 0em",border:"none"  }}>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>
           <Grid.Column width={16} textAlign="center">
-            <Header as="h2" style={{ fontSize: "3em" }}>
+            <Header as="h1" style={{ fontSize: "3em" }}>
               ABOUT XIAOXU ZHOU
             </Header>
-            <Divider horizontal></Divider>
-            <Header >
-              Dan is a responsible person. He is passionate about coding and developing fatastic projects.
-            </Header>
+            {/* <Header>
+              Dan is a responsible person. He is passionate about coding and
+              developing fatastic projects.
+            </Header> */}
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              We Help Companies and Companions
+              Backend Year
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              We can give your company superpowers to do things that they never
-              thought possible. Let us delight your customers and empower your
-              needs... through pure data analytics.
+              My programmer life stated at 2009. In the first three years, I
+              worked as a Java developer. I wrote JSP and Servlets to add
+              functionality to web application based on customer requirements.
             </p>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              We Make Bananas That Can Dance
+              As an IBMer
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-            Dan is also very family oriented and has a 10 year old daughter named Brianna and a 7 year old son named Nicky who is severely autistic and non-verbal. Work and family is the cornerstone of Brad's life
+              In 2012, I am fortunate to be an IBMer. After finishing the
+              maintenance of one JAVA application, I started to learn forntend
+              technologies.
             </p>
           </Grid.Column>
           <Grid.Column width={8}>
@@ -327,74 +331,47 @@ const Layout = () => (
       </Grid>
     </Segment> */}
 
-    <Segment id="CONTACT" style={{ padding: "8em 0em" }} vertical>
-      <Container text>
-        <Header as="h3" style={{ fontSize: "2em" }}>
-          Breaking The Grid, Grabs Your Attention
+    <Segment
+      id="SKILLSTACK"
+      style={{ padding: "10em 0em", transform: "skewY(-5deg)"}}
+      vertical
+      color="blue"
+      inverted
+    >
+      <Container textAlign="center" style={{ transform: "skewY(5deg)" }}>
+        <Header as="h1" style={{ fontSize: "3em", paddingBottom: "1em" }}>
+          SKILL STACK
         </Header>
-        <p style={{ fontSize: "1.33em" }}>
-          Instead of focusing on content creation and hard work, we have learned
-          how to master the art of doing nothing by providing massive amounts of
-          whitespace and generic content that can seem massive, monolithic and
-          worth your attention.
-        </p>
-        <Button as="a" size="large">
-          Read More
-        </Button>
-
-        <Divider
-          as="h4"
-          className="header"
-          horizontal
-          style={{ margin: "3em 0em", textTransform: "uppercase" }}
-        >
-          <a href="#">Case Studies</a>
-        </Divider>
-
-        <Header as="h3" style={{ fontSize: "2em" }}>
-          Did We Tell You About Our Bananas?
-        </Header>
-        <p style={{ fontSize: "1.33em" }}>
-          Yes I know you probably disregarded the earlier boasts as non-sequitur
-          filler content, but it's really true. It took years of gene splicing
-          and combinatory DNA research, but our bananas can really dance.
-        </p>
-        <Button as="a" size="large">
-          I'm Still Quite Interested
-        </Button>
+        <SkillStackCard />
       </Container>
     </Segment>
 
-    <Segment inverted vertical style={{ padding: "5em 0em" }}>
+    <Segment id="PROJECTS" style={{ padding: "20em 0em" }} vertical>
+      <Container textAlign="center">
+        <Header as="h1" style={{ fontSize: "3em", paddingBottom: "1em" }}>
+          PROJECTS
+        </Header>
+        <ProjectTabular />
+      </Container>
+
+    </Segment>
+
+    <Segment inverted vertical style={{ padding: "3em 0em" }} color="blue">
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as="h4" content="About" />
-              <List link inverted>
-                <List.Item as="a">Sitemap</List.Item>
-                <List.Item as="a">Contact Us</List.Item>
-                <List.Item as="a">Religious Ceremonies</List.Item>
-                <List.Item as="a">Gazebo Plans</List.Item>
-              </List>
+            <Grid.Column width={6}>
+              <Header inverted as="a" content="Linkedin" />
             </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as="h4" content="Services" />
-              <List link inverted>
-                <List.Item as="a">Banana Pre-Order</List.Item>
-                <List.Item as="a">DNA FAQ</List.Item>
-                <List.Item as="a">How To Access</List.Item>
-                <List.Item as="a">Favorite X-Men</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as="h4" inverted>
-                Footer Header
+            <Grid.Column width={6}>
+              <Header inverted as="a">
+                <a href="./files/ZhouXiaoXu_RESUME.docx">Resume</a>
               </Header>
-              <p>
-                Extra space for a call to action inside the footer that could
-                help re-engage users.
-              </p>
+            </Grid.Column>
+            <Grid.Column width={4}>
+              <Header as="h4" inverted>
+                Site by XIAOXU ZHOU
+              </Header>
             </Grid.Column>
           </Grid.Row>
         </Grid>
