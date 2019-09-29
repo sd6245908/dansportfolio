@@ -12,7 +12,7 @@ const items = [
 
 const SkillStackCard = () => (
   <Card.Group centered>
-    <Card style={{ margin: "0em,2em" }}>
+    <Card style={{ margin: "0em,2em" }} raised>
       <Card.Content>
         {/* <Label attached='top'size='big' color='brown'>Frontend</Label> */}
         <Card.Header> Frontend </Card.Header>
@@ -36,7 +36,7 @@ const SkillStackCard = () => (
       </Card.Content>
     </Card>
 
-    <Card>
+    <Card raised>
       <Card.Content>
         <Card.Header content="Server" />
         <Image src="../images/java.png" size="medium" style={{padding:'3em'}}/>
@@ -60,7 +60,7 @@ const SkillStackCard = () => (
         <Icon name="hourglass half" />3 Years
       </Card.Content>
     </Card>
-    <Card>
+    <Card raised>
       <Card.Content>
         <Card.Header>Database</Card.Header>
         <Image src="../images/database.png" size="medium"  style={{padding:'4em'}}/>

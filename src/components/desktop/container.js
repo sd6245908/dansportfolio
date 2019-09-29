@@ -23,8 +23,10 @@ class DesktopContainer extends Component {
   showFixedMenu = () => this.setState({ fixed: true });
   menuItemClick = function(e) {
     e.preventDefault();
-    setTimeout(()=> {
-      document.querySelector("#"+this.content).scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      document
+        .querySelector("#" + this.content)
+        .scrollIntoView({ behavior: "smooth" });
     }, 250);
     console.log(this);
   };
@@ -41,13 +43,17 @@ class DesktopContainer extends Component {
         <Visibility
           once={false}
           onTopPassed={this.showFixedMenu}
-          onBottomPassedReverse = {this.showFixedMenu}
+          // onBottomPassedReverse = {this.showFixedMenu}
           onTopPassedReverse={this.hideFixedMenu}
         >
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" , borderBottom:"1px solid white",clipPath:"polygon(0 0, 100% 0, 100% 60vh, 0 100%)"}}
+            style={{
+              minHeight: 700,
+              padding: "1em 0em",
+              borderBottom: "1px solid white"
+            }}
             vertical
             color="blue"
           >
@@ -73,22 +79,23 @@ class DesktopContainer extends Component {
                 ></Menu.Item>
                 <Menu.Item
                   as="a"
-                  content="PROJECTS"
-                  href="#PROJECTS"
-                  onClick={this.menuItemClick}
-                ></Menu.Item>
-                <Menu.Item
-                  as="a"
                   content="ABOUT"
                   href="#ABOUT"
                   onClick={this.menuItemClick}
                 ></Menu.Item>
                 <Menu.Item
                   as="a"
-                  content="CONTACT"
-                  href="#CONTACT"
+                  content="SKILLSTACK"
+                  href="#SKILLSTACK"
                   onClick={this.menuItemClick}
                 ></Menu.Item>
+                <Menu.Item
+                  as="a"
+                  content="PROJECTS"
+                  href="#PROJECTS"
+                  onClick={this.menuItemClick}
+                ></Menu.Item>
+
                 {/* <Menu.Item as="a" href="https://github.com/sd6245908/dansportfolio" target="_blank">MYGIT</Menu.Item>
                 
                 <Menu.Item as="a">RESUME</Menu.Item> */}

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import PortfolioProgress from '../components/portfolioprogress'
 import { Button, Container, Header, Icon } from "semantic-ui-react";
 
 const HomepageHeading = ({ mobile }) => {
   return (
-    <Container >
+    <Container  >
+       {/* <PortfolioProgress /> */}
       <Header
         as="h1"
         content="FRONT END FOCUSED WITH FULL STACK EXPERIENCE"
@@ -16,6 +18,7 @@ const HomepageHeading = ({ mobile }) => {
           marginTop: mobile ? "1.5em" : "3em"
         }}
       />
+           
       <Header
         as="h2"
         content="Welcome to Dan's Portfolio"
@@ -30,6 +33,7 @@ const HomepageHeading = ({ mobile }) => {
         Projects 
         <Icon name="down circle arrow" style={{paddingLeft:"20px"}}/>
       </Button>
+
     </Container>
   );
 };
