@@ -45,7 +45,7 @@ const ItemExampleDivided = () => (
       </Item.Content>
     </Item>
     <Item>
-      <Item.Image src="images/ibm-512.png" />
+      <Item.Image src="images/ibm-512-black.png" />
 
       <Item.Content>
         <Item.Header as="a">IBM W3 Portal</Item.Header>
@@ -102,7 +102,7 @@ const ItemExampleDivided = () => (
     </Item>
 
     <Item>
-      <Item.Image src="images/ibm-512.png" />
+      <Item.Image src="images/ibm-512-blue.png" />
 
       <Item.Content>
         <Item.Header as="a">IBM荟专享</Item.Header>
@@ -149,7 +149,7 @@ const ItemExampleDivided = () => (
     </Item>
 
     <Item>
-      <Item.Image src="images/ibm-512.png" />
+      <Item.Image src="images/ibm-512-black.png" />
 
       <Item.Content>
         <Item.Header as="a">Humix Chatbot</Item.Header>
