@@ -11,7 +11,6 @@ import {
 import DesktopContainer from "./desktop/container";
 import MobileContainer from "./mobile/container";
 import SkillStackCard from "./desktop/skillstackcard";
-import ProjectTabular from './desktop/projecttabular'
 import ItemExampleDivided from './desktop/projectitem'
 
 
@@ -67,7 +66,7 @@ const Layout = () => (
               circular
               centered
               size="large"
-              src="/images/Dan.JPG"
+              src="/images/onetreehill.jpg"
             />
           </Grid.Column>
         </Grid.Row>
