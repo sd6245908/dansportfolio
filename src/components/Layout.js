@@ -111,7 +111,7 @@ const Layout = () => (
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={6}>
-              <Header inverted as="a" content="Linkedin" />
+              <Header inverted as="a" content="Linkedin" href='https://www.linkedin.com/in/xiaoxuzhou/' />
             </Grid.Column>
             <Grid.Column width={6}>
               <Header inverted as="a" href='./files/ZhouXiaoXu_RESUME.docx' inverted>

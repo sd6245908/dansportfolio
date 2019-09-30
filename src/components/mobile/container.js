@@ -58,14 +58,14 @@ class MobileContainer extends Component {
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name="sidebar" />
                 </Menu.Item>
-                <Menu.Item position="right">
+                {/* <Menu.Item position="right">
                   <Button as="a" inverted>
                     Log in
                   </Button>
                   <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
                     Sign Up
                   </Button>
-                </Menu.Item>
+                </Menu.Item> */}
               </Menu>
             </Container>
             <HomepageHeading mobile />

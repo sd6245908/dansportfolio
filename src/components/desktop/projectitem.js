@@ -110,9 +110,9 @@ const ItemExampleDivided = () => (
           <span className="cinema">April 2018 - May 2018</span>
         </Item.Meta>
         <Item.Description>
-          IBM "荟专享" is built on Wechat Mini Progrom Platform. I am the
-          only backend developer who is reponsible for the Restful APIs
-          development using Java and DB2.
+          IBM "荟专享" is built on Wechat Mini Progrom Platform. I am the only
+          backend developer who is reponsible for the Restful APIs development
+          using Java and DB2.
         </Item.Description>
         <Item.Extra>
           <Modal
@@ -156,14 +156,12 @@ const ItemExampleDivided = () => (
         <Item.Meta>
           <span className="cinema">August 2013 - August 2017</span>
         </Item.Meta>
-        <Item.Description>
-          Coming soon...
-        </Item.Description>
+        <Item.Description>Coming soon...</Item.Description>
         <Item.Extra>
-          <Button primary floated="right">
+          {/* <Button primary floated="right">
             See Demo
             <Icon name="right chevron" />
-          </Button>
+          </Button> */}
         </Item.Extra>
       </Item.Content>
     </Item>
@@ -175,7 +173,13 @@ const ItemExampleDivided = () => (
         <Item.Meta>
           <span className="cinema">August 2013 - August 2017</span>
         </Item.Meta>
-        <Item.Description>Coming soon...</Item.Description>
+        <Item.Description>
+          This is also a internal project called "Task Management System". It
+          tracks staff daily work. It involves planning, tracking, and
+          reporting. I wrote JSP, Servlets and SQL to add functionality. It's
+          been a long time. My database skill improved a lot in this project. I
+          wrote hundreds of SQL.
+        </Item.Description>
         {/* <Item.Extra>
           <Button primary floated="right">
             See Demo
