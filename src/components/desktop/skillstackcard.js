@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Image, Icon, Label, Transition } from "semantic-ui-react";
+import { Card, Image, Icon, Label, Reveal } from "semantic-ui-react";
 
 const items = [
   {
@@ -15,68 +15,32 @@ const items = [
 
 const SkillStackCard = () => (
   <Card.Group itemsPerRow={3} centered>
-  <Card style={{ margin: "0em,2em" }} raised  >
-        <Card.Content>
-          {/* <Label attached='top'size='big' color='brown'>Frontend</Label> */}
-          <Card.Header> Frontend </Card.Header>
+    <Card style={{ margin: "0em,2em" }} raised>
+      <Card.Content>
+        {/* <Label attached='top'size='big' color='brown'>Frontend</Label> */}
+        <Card.Header> Frontend </Card.Header>
 
-          <Image
-            src="../images/javascript.png"
-            size="medium"
-            style={{ padding: "2em" }}
-          />
-
-          {/* <Icon name="html5" size='massive' /> */}
-          {/* <Card.Meta>Four Years</Card.Meta> */}
-          <Card.Description>
-            <Label as="a" color="brown">
-              ReactJS
-            </Label>
-            <Label as="a" color="brown">
-              JQuery
-            </Label>
-            <Label as="a" color="brown">
-              BackboneJS
-            </Label>
-          </Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <Icon name="hourglass half" />4 Years +
-        </Card.Content>
-      </Card>
-
-    <Transition visible={false} animation="scale" duration={500}>
-      <Card style={{ margin: "0em,2em" }} raised >
-        <Card.Content>
-          {/* <Label attached='top'size='big' color='brown'>Frontend</Label> */}
-          <Card.Header> Frontend </Card.Header>
-
-          <Image
-            src="../images/javascript.png"
-            size="medium"
-            style={{ padding: "2em" }}
-          />
-
-          {/* <Icon name="html5" size='massive' /> */}
-          {/* <Card.Meta>Four Years</Card.Meta> */}
-          <Card.Description>
-            <Label as="a" color="brown">
-              ReactJS
-            </Label>
-            <Label as="a" color="brown">
-              JQuery
-            </Label>
-            <Label as="a" color="brown">
-              BackboneJS
-            </Label>
-          </Card.Description>
-        </Card.Content>
-        <Card.Content extra>
-          <Icon name="hourglass half" />4 Years +
-        </Card.Content>
-      </Card>
-    </Transition>
-    
+        <Image
+          src="../images/javascript.png"
+          size="medium"
+          style={{ padding: "2em" }}
+        />
+        <Card.Description>
+          <Label as="a" color="brown">
+            ReactJS
+          </Label>
+          <Label as="a" color="brown">
+            JQuery
+          </Label>
+          <Label as="a" color="brown">
+            BackboneJS
+          </Label>
+        </Card.Description>
+      </Card.Content>
+      <Card.Content extra>
+        <Icon name="hourglass half" />4 Years +
+      </Card.Content>
+    </Card>
     <Card raised>
       <Card.Content>
         <Card.Header content="Server" />
@@ -86,7 +50,7 @@ const SkillStackCard = () => (
           style={{ padding: "3em" }}
         />
         {/* <Card.Meta content="Three Years" /> */}
-        <Card.Description >
+        <Card.Description>
           <Label as="a" color="brown">
             Sprint
           </Label>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import PortfolioProgress from '../components/portfolioprogress'
-import { Button, Container, Header, Icon } from "semantic-ui-react";
+import { Progress, Container, Header, Icon,Message } from "semantic-ui-react";
 
 const HomepageHeading = ({ mobile }) => {
   return (
@@ -29,6 +29,10 @@ const HomepageHeading = ({ mobile }) => {
           marginTop: mobile ? "0.5em" : "1.5em"
         }}
       />
+      
+      {/* <Progress percent={85} Active indicating inverted color="yellow">When you see this message, it means my portfolio is still under building. I am updating on a daily basis.</Progress> */}
+    {/* </Message> */}
+
       {/* <Button primary size="huge">
         Projects 
         <Icon name="down circle arrow" style={{paddingLeft:"20px"}}/>

@@ -7,7 +7,9 @@ import {
   Header,
   Image,
   Segment,
-  Label
+  Label,
+  Message,
+  Progress
 } from "semantic-ui-react";
 import DesktopContainer from "./desktop/container";
 import MobileContainer from "./mobile/container";
@@ -72,11 +74,6 @@ const Layout = () => (
             />
           </Grid.Column>
         </Grid.Row>
-        {/* <Grid.Row>
-          <Grid.Column textAlign="center">
-            <Button size="huge">Check Them Out</Button>
-          </Grid.Column>
-        </Grid.Row> */}
       </Grid>
     </Segment>
 
@@ -99,14 +96,14 @@ const Layout = () => (
       </Container>
     </Segment>
 
-    <Segment id="PROJECTS" vertical style={{ padding: "3em 0em" }}>
-      <Container textAlign="center">
-        <Header as="h1" style={{ fontSize: "3em", paddingBottom: "1em" }}>
+    <Segment id="PROJECTS" vertical padded='very' >
+      <Container >
+        <Header textAlign="center" as="h1" style={{ fontSize: "3em", paddingBottom: "1em" }}>
           PROJECTS
         </Header>
         {/* <ProjectTabular /> */}
 
-        <ItemExampleDivided />
+        <ItemExampleDivided  />
       </Container>
     </Segment>
 

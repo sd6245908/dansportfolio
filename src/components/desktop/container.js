@@ -50,7 +50,7 @@ class DesktopContainer extends Component {
             inverted
             textAlign="center"
             style={{
-              minHeight: 700,
+              minHeight: 650,
               padding: "1em 0em",
               borderBottom: "1px solid white"
             }}

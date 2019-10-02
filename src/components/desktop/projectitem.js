@@ -7,7 +7,8 @@ import {
   Label,
   Modal,
   Header,
-  Embed
+  Embed,
+  Popup
 } from "semantic-ui-react";
 
 const ItemExampleDivided = () => (
@@ -16,7 +17,7 @@ const ItemExampleDivided = () => (
       <Item.Image src="images/rocketshp.png" />
 
       <Item.Content>
-        <Item.Header as="a">RocketShp </Item.Header>
+        <Item.Header>RocketShp </Item.Header>
         <Item.Meta>
           <span className="cinema">Two weeks in NZ</span>
         </Item.Meta>
@@ -36,7 +37,7 @@ const ItemExampleDivided = () => (
             floated="right"
           >
             See Website
-            <Icon name="right chevron" />
+            {/* <Icon name="right chevron" /> */}
           </Button>
           <Label>Wordpress</Label>
           <Label>Siteground</Label>
@@ -45,10 +46,10 @@ const ItemExampleDivided = () => (
       </Item.Content>
     </Item>
     <Item>
-      <Item.Image src="images/ibm-512-black.png" />
+      <Item.Image src="images/IBM-Logo.jpg" />
 
       <Item.Content>
-        <Item.Header as="a">IBM W3 Portal</Item.Header>
+        <Item.Header>IBM W3 Portal</Item.Header>
         <Item.Meta>
           <span className="cinema">Aug 2013 - Jan 2018</span>
         </Item.Meta>
@@ -67,7 +68,7 @@ const ItemExampleDivided = () => (
             trigger={
               <Button primary floated="right">
                 See Images
-                <Icon name="right chevron" />
+                {/* <Icon name="right chevron" /> */}
               </Button>
             }
           >
@@ -102,10 +103,10 @@ const ItemExampleDivided = () => (
     </Item>
 
     <Item>
-      <Item.Image src="images/ibm-512-blue.png" />
+      <Item.Image src="images/IBM-Logo.jpg" />
 
       <Item.Content>
-        <Item.Header as="a">IBM荟专享</Item.Header>
+        <Item.Header>IBM荟专享</Item.Header>
         <Item.Meta>
           <span className="cinema">April 2018 - May 2018</span>
         </Item.Meta>
@@ -119,7 +120,7 @@ const ItemExampleDivided = () => (
             trigger={
               <Button primary floated="right">
                 See Demo
-                <Icon name="right chevron" />
+                {/* <Icon name="right chevron" /> */}
               </Button>
             }
           >
@@ -147,7 +148,7 @@ const ItemExampleDivided = () => (
         </Item.Extra>
       </Item.Content>
     </Item>
-
+    {/* 
     <Item>
       <Item.Image src="images/ibm-512-black.png" />
 
@@ -157,52 +158,78 @@ const ItemExampleDivided = () => (
           <span className="cinema">August 2013 - August 2017</span>
         </Item.Meta>
         <Item.Description>Coming soon...</Item.Description>
-        <Item.Extra>
-          {/* <Button primary floated="right">
-            See Demo
-            <Icon name="right chevron" />
-          </Button> */}
-        </Item.Extra>
       </Item.Content>
-    </Item>
+    </Item> */}
     <Item>
-      <Item.Image src="images/ibm-512-black.png" />
+      <Item.Image src="images/bt-group-logo-vector.png" />
 
       <Item.Content>
-        <Item.Header as="a">BULK Utility Tool</Item.Header>
+        <Item.Header>Bulk Utility Tool</Item.Header>
         <Item.Meta>
-          <span className="cinema">August 2013 - August 2017</span>
+          <span className="cinema">Jan 2011 - August 2011</span>
         </Item.Meta>
-        <Item.Description>Coming soon...</Item.Description>
+        <Item.Description>
+          This project is called 'BULK Utility Tool', which is mainly used to
+          process large CSV files. One CSV file normally has more than 100,000
+          records. Each record will be processed and stored in Database.
+        </Item.Description>
         <Item.Extra>
-          {/* <Button primary floated="right">
-            See Demo
-            <Icon name="right chevron" />
-          </Button> */}
+          <Popup
+            content="Oops, the project has... gone."
+            position='top center'
+            trigger={
+              <Button color='grey'  floated="right">
+                {" "}
+                See ...
+                {/* <Icon name="right chevron" /> */}
+              </Button>
+            }
+          />
+          <Label>Java</Label>
+          <Label>Jsp</Label>
+          <Label>Mybatis</Label>
+          <Label>Spring</Label>
+          <Label>Camel</Label>
+          <Label>Oracle</Label>
+          <Label>Quartz</Label>
         </Item.Extra>
       </Item.Content>
     </Item>
     <Item>
-      <Item.Image src="images/neusoft.png" />
+      <Item.Image src="images/neusoft1.png" />
 
       <Item.Content>
         <Item.Header as="a">Task Management system</Item.Header>
         <Item.Meta>
-          <span className="cinema">August 2013 - August 2017</span>
+          <span className="cinema">Oct 2009 - Nov 2011</span>
         </Item.Meta>
         <Item.Description>
-          This is also a internal project called "Task Management System". It
+          This is also an internal project called "Task Management System". It
           tracks staff daily work. It involves planning, tracking, and
           reporting. I wrote JSP, Servlets and SQL to add functionality. It's
           been a long time. My database skill improved a lot in this project. I
           wrote hundreds of SQL.
         </Item.Description>
-        {/* <Item.Extra>
-          <Button primary floated="right">
-            See Demo
-            <Icon name="right chevron" />
-          </Button>
-        </Item.Extra> */}
+        <Item.Extra>
+          <Popup
+            content="Oops, the project has... gone."
+            position='top center'
+            trigger={
+              <Button color='grey'  floated="right">
+                {" "}
+                See ...
+                {/* <Icon name="right chevron" /> */}
+              </Button>
+            }
+          />
+
+          <Label>Java</Label>
+          <Label>Struts</Label>
+          <Label>Ibatis</Label>
+          <Label>Spring</Label>
+          <Label>JSP</Label>
+          <Label>Oracle</Label>
+        </Item.Extra>
       </Item.Content>
     </Item>
   </Item.Group>
