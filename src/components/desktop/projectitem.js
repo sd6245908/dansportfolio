@@ -166,6 +166,23 @@ const ItemExampleDivided = () => (
       </Item.Content>
     </Item>
     <Item>
+      <Item.Image src="images/ibm-512-black.png" />
+
+      <Item.Content>
+        <Item.Header as="a">BULK Utility Tool</Item.Header>
+        <Item.Meta>
+          <span className="cinema">August 2013 - August 2017</span>
+        </Item.Meta>
+        <Item.Description>Coming soon...</Item.Description>
+        <Item.Extra>
+          {/* <Button primary floated="right">
+            See Demo
+            <Icon name="right chevron" />
+          </Button> */}
+        </Item.Extra>
+      </Item.Content>
+    </Item>
+    <Item>
       <Item.Image src="images/neusoft.png" />
 
       <Item.Content>
