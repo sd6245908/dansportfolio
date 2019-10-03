@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Button,
-  Icon,
   Image,
   Item,
   Label,
@@ -148,18 +147,6 @@ const ItemExampleDivided = () => (
         </Item.Extra>
       </Item.Content>
     </Item>
-    {/* 
-    <Item>
-      <Item.Image src="images/ibm-512-black.png" />
-
-      <Item.Content>
-        <Item.Header as="a">Humix Chatbot</Item.Header>
-        <Item.Meta>
-          <span className="cinema">August 2013 - August 2017</span>
-        </Item.Meta>
-        <Item.Description>Coming soon...</Item.Description>
-      </Item.Content>
-    </Item> */}
     <Item>
       <Item.Image src="images/bt-group-logo-vector.png" />
 

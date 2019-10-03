@@ -1,12 +1,5 @@
-// import React from 'react'
-// import { Progress } from 'semantic-ui-react'
-
-// const PortfolioProgress = () => <Progress percent={70} />
-
-// export default PortfolioProgress;
-
 import React, { Component } from 'react'
-import { Button, Progress } from 'semantic-ui-react'
+import { Progress } from 'semantic-ui-react'
 
 export default class PortfolioProgress extends Component {
   state = { percent: 77 }

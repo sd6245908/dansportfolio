@@ -1,15 +1,12 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import {
   Container,
   Grid,
   Header,
   Image,
-  Segment,
-  Label,
-  Message,
-  Progress
+  Segment
 } from "semantic-ui-react";
 import DesktopContainer from "./desktop/container";
 import MobileContainer from "./mobile/container";
@@ -96,7 +93,7 @@ const Layout = () => (
       </Container>
     </Segment>
 
-    <Segment id="PROJECTS" vertical padded='very' >
+    <Segment id="PROJECTS" vertical style={{ padding: "5em 0em" }} >
       <Container >
         <Header textAlign="center" as="h1" style={{ fontSize: "3em", paddingBottom: "1em" }}>
           PROJECTS
@@ -111,15 +108,16 @@ const Layout = () => (
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
-            <Grid.Column width={6}>
+            <Grid.Column width={2}>
               <Header
                 inverted
                 as="a"
                 content="Linkedin"
                 href="https://www.linkedin.com/in/xiaoxuzhou/"
+                target='_blank'
               />
             </Grid.Column>
-            <Grid.Column width={6}>
+            <Grid.Column width={2}>
               <Header
                 inverted
                 as="a"
@@ -130,7 +128,18 @@ const Layout = () => (
                 Resume
               </Header>
             </Grid.Column>
-            <Grid.Column width={4}>
+            <Grid.Column width={2}>
+              <Header
+                inverted
+                as="a"
+                href="https://github.com/sd6245908/dansportfolio"
+                inverted
+                target='_blank'
+              >
+                Github
+              </Header>
+            </Grid.Column>
+            <Grid.Column width={10} textAlign='right' >
               <Header as="h4" inverted>
                 Site by XIAOXU ZHOU
               </Header>

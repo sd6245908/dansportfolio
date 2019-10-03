@@ -1,17 +1,14 @@
 import React from "react";
-import { Card, Image, Icon, Label, Reveal } from "semantic-ui-react";
+import { Card, Image, Icon, Label } from "semantic-ui-react";
 
-const items = [
-  {
-    Header: "Frontend",
-    Meta: "Four Years",
-    Description: "ReactJS,JQuery,BackboneJS,NodeJS",
-    Image: "../images/javascript.png"
-  }
-];
-
-// toggleVisibility = () =>
-// this.setState((prevState) => ({ visible: !prevState.visible }))
+// const items = [
+//   {
+//     Header: "Frontend",
+//     Meta: "Four Years",
+//     Description: "ReactJS,JQuery,BackboneJS,NodeJS",
+//     Image: "../images/javascript.png"
+//   }
+// ];
 
 const SkillStackCard = () => (
   <Card.Group itemsPerRow={3} centered>
@@ -49,7 +46,6 @@ const SkillStackCard = () => (
           size="medium"
           style={{ padding: "3em" }}
         />
-        {/* <Card.Meta content="Three Years" /> */}
         <Card.Description>
           <Label as="a" color="brown">
             Sprint
@@ -95,10 +91,6 @@ const SkillStackCard = () => (
         <Icon name="hourglass half" />2 Years
       </Card.Content>
     </Card>
-    {/* <Card.Header content="DATABASE" />
-      <Image src="../images/database.png" wrapped ui={false} size="medium" />
-      <Card.Content meta="Two Years" description="Oracle|MySql|DB2" />
-    </Card> */}
   </Card.Group>
 );
 

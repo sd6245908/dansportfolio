@@ -1,7 +1,6 @@
 import React,{Component} from "react";
 import PropTypes from 'prop-types';
 import {
-  Button,
   Container,
   Icon,
   Menu,
@@ -13,10 +12,24 @@ import Util from '../util';
 import HomepageHeading from '../HomePageHeading';
 class MobileContainer extends Component {
   state = {};
+  textInput = React.createRef();
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
 
   handleToggle = () => this.setState({ sidebarOpened: true });
+
+  menuItemClick =(e) =>{
+    e.preventDefault();
+    let id = `#${e.target.textContent}`;
+    this.handleSidebarHide();
+    setTimeout(() => {
+      document
+        .querySelector(id)
+        .scrollIntoView({ behavior: "smooth" });
+    }, 250);
+    console.log(this);
+    
+  };
 
   render() {
     const { children } = this.props;
@@ -36,14 +49,12 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as="a" active>
+          <Menu.Item as="a" refs={this.textInput} active>
             Home
           </Menu.Item>
-          <Menu.Item as="a">Work</Menu.Item>
-          <Menu.Item as="a">Company</Menu.Item>
-          <Menu.Item as="a">Careers</Menu.Item>
-          <Menu.Item as="a">Log in</Menu.Item>
-          <Menu.Item as="a">Sign Up</Menu.Item>
+          <Menu.Item as="a" content='ABOUT'  refs={this.textInput} onClick={this.menuItemClick}></Menu.Item>
+          <Menu.Item as="a" content='SKILLSTACK' onClick={this.menuItemClick}></Menu.Item>
+          <Menu.Item as="a" content='PROJECTS' onClick={this.menuItemClick}></Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>

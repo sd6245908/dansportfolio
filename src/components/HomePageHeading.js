@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import PortfolioProgress from '../components/portfolioprogress'
-import { Progress, Container, Header, Icon,Message } from "semantic-ui-react";
+// import PortfolioProgress from '../components/portfolioprogress'
+import { Container, Header} from "semantic-ui-react";
 
 const HomepageHeading = ({ mobile }) => {
   return (
