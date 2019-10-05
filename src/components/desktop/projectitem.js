@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Button,
-  Image,
   Item,
   Label,
   Modal,
@@ -9,6 +8,7 @@ import {
   Embed,
   Popup
 } from "semantic-ui-react";
+import W3ProjectOverlay from './w3projectoverlay'
 
 const ItemExampleDivided = () => (
   <Item.Group divided>
@@ -82,11 +82,7 @@ const ItemExampleDivided = () => (
                   <Label>SASS</Label>
                   <Label>NodeJs</Label>
                 </Header>
-                <Image src="/images/ibmw3/Signin1.png" />
-                <Image src="/images/ibmw3/Cards1-2-3.png" />
-                <Image src="/images/ibmw3/Statuses4.png" />
-                <Image src="/images/ibmw3/Think40-1.png" />
-                <Image src="/images/ibmw3/Think40-3.png" />
+              <W3ProjectOverlay />
               </Modal.Description>
             </Modal.Content>
           </Modal>
