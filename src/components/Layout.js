@@ -67,7 +67,7 @@ const Layout = () => (
               circular
               centered
               size="large"
-              src="/images/onetreehill.jpg"
+              src="/images/Dan.jpg"
             />
           </Grid.Column>
         </Grid.Row>

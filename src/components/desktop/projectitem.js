@@ -12,6 +12,86 @@ import W3ProjectOverlay from './w3projectoverlay'
 
 const ItemExampleDivided = () => (
   <Item.Group divided>
+     <Item>
+      <Item.Image src="images/Dance2GO-logo.png" />
+
+      <Item.Content>
+        <Item.Header>Dance2Go </Item.Header>
+        <Item.Meta>
+          <span className="cinema">Otc 2019 - Present</span>
+        </Item.Meta>
+        <Item.Description>
+        The business owner plans to migrate his website from ASP to Woocommerce. The corporation between the business owner and the previous developers is quite bad. They spent Two years setting up the website but they failed. I went through everything and gave my professional advice to my client. Our successful communication and corporation push the website online quite soon.
+        </Item.Description>
+        <Item.Extra>
+          <Button
+            as="a"
+            href="http://www.dance2go.co.nz/"
+            target="_blank"
+            primary
+            floated="right"
+          >
+            Old Site
+            {/* <Icon name="right chevron" /> */}
+          </Button>
+          <Button
+            as="a"
+            href="http://www.nz2family.com/"
+            target="_blank"
+            primary
+            floated="right"
+          >
+            New Site
+            {/* <Icon name="right chevron" /> */}
+          </Button>
+          <Label>Wordpress</Label>
+          <Label>Woocommerce</Label>
+        </Item.Extra>
+      </Item.Content>
+    </Item>
+
+
+
+    <Item>
+      <Item.Image src="images/vfhlogo.png" />
+
+      <Item.Content>
+        <Item.Header>Vision For Humanity </Item.Header>
+        <Item.Meta>
+          <span className="cinema">Nov 2019 - Present</span>
+        </Item.Meta>
+        <Item.Description>
+        Working as a volunteer to advise and re-develop the whole website using Wordpress. I am the only developer and responsible for everything, including setting up the environment, design, and development.
+        </Item.Description>
+        <Item.Extra>
+        <Button
+            as="a"
+            href="http://www.vfh.org.nz/"
+            target="_blank"
+            primary
+            floated="right"
+          >
+            Old Site
+            {/* <Icon name="right chevron" /> */}
+          </Button>
+          <Button
+            as="a"
+            href="http://www.vfh.org.nz/vfh-newsite"
+            target="_blank"
+            primary
+            floated="right"
+          >
+            New Site
+            {/* <Icon name="right chevron" /> */}
+          </Button>
+          <Label>Wordpress</Label>
+        </Item.Extra>
+      </Item.Content>
+    </Item>
+
+
+
+
     <Item>
       <Item.Image src="images/rocketshp.png" />
 
